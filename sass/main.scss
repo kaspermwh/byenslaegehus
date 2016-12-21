@@ -51,24 +51,114 @@ textarea {
     padding: 0.2em 0;
 }
 
+/* ==========================================================================
+   SASS - Koala
+   ========================================================================== */
+
+$white: #fff;
+$black: #000;
+$docblue: #003b6f;
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
 
+main {
+    max-width: 980px;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
 
+a {
+    color: black;
+}
 
+nav {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    display: flex;
+    background: $docblue;
+    color: $white;
+    height: 80px;
+    
+    #nav-wrapper {
+        width: 100%;
+        max-width: 980px;
+        display: inline-flex;
+        margin: 0 auto;
+        
+        .nav-header {
+            width: 50%;
+        }
+        
+        a {
+            color: $white;
+            text-decoration: none;
+            
+        }
 
+        ul {
+            display: inline-flex;
+            width: 50%;
+            height: 100%;
+            margin: 0px;
+            padding: 0px;
+            line-height: 80px;
+            justify-content: space-around;
 
+            li {
+                list-style: none;
+                min-width: 100px;
+                text-align: center;
+                height: 100%;
+            }
+            
+            li:hover, li:focus {
+                background: $white;
+                color: $black;
+            }
+        }
+    }
+}
 
+#index-wrapper {
+    margin-top: 80px;
+    display: flex;
+}
 
+#news-feed {
+    padding: 1em;
+    
+    article {
+        border: 1px solid $black;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+}
 
+#info-feed {
+    padding: 1em;
+    color: $white;
+    
+    article {
+        background: $docblue;
+        padding: 1em;
+        margin-bottom: 2em;
+    }
+}
 
-
-
-
-
-
+footer {
+    background: $docblue;
+    color: $white;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 /* ==========================================================================
    Media Queries
